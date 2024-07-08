@@ -1,0 +1,65 @@
+.currentPage {
+    background-color: var(--background_current_page);
+    height: 24px;
+    width: 24px;
+    border: 0;
+    border-radius: 4px;
+
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 22.4px;
+
+    color: var(--font);
+}
+.currentPage:hover {
+    cursor: pointer;
+}
+.notCurrentPage {
+    height: 24px;
+    width: 24px;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 22.4px;
+
+    color: var(--font);
+    
+    background: 0;
+    border: 0;
+    
+}
+.notCurrentPage:hover {
+    border-bottom: 2px solid var(--secondary_second);
+    cursor: pointer;
+}
+.next {
+    background: 0;
+    height: 24px;
+    border: 0;
+    svg path {
+        fill: var(--font);
+    }
+}
+.next:hover {
+    cursor: pointer;
+}
+.prev {
+    background: 0;
+    height: 24px;
+    border: 0;
+    svg path {
+        fill: var(--font);
+    }
+}
+.prev:hover {
+    cursor: pointer;
+}
+.dots {
+    background: 0;
+    height: 24px;
+    border: 0;
+    svg path {
+        fill: var(--font);
+    }
+}

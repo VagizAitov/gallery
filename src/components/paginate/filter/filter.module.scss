@@ -1,0 +1,200 @@
+@import url('../../../variable.module.scss');
+
+.disp {
+    transition: 0.2s;
+    position: fixed;
+    display: grid;
+
+    grid-auto-flow: column;
+    grid-template-columns: 1fr var(--menu-width);
+
+    width: 100vh;
+    height: 100%;
+    z-index: 4;
+    margin-left: 100%;
+    transform: translateX(-100%);
+}
+
+.notDisp {
+    transition: 0.2s;
+
+    position: fixed;
+    margin-left: 100%;
+    overflow: hidden;
+}
+.main{
+    background: var(--primary);
+    overflow: hidden scroll;
+}
+
+.filterAuthors {
+    background: 0;
+    border: 0;
+    width: 100%;
+    margin-left: 10%;
+    //styleName: Heading/H1 medium 16 uppercase;
+    font-family: Cormorant SC;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19.38px;
+    text-align: left;
+    height: 50px;
+
+    color: var(--font);
+}
+.filterAuthors:hover {
+    cursor: pointer;
+}
+.filterAuthors:focus{
+    outline: 0;
+}
+
+.closeMenu {
+    background: 0;
+    border: 0;
+    margin-left: 90%;
+    margin-top: 5%;
+    svg path {
+        fill: var(--font);
+    }
+}
+.closeMenu:hover {
+    cursor: pointer;
+}
+.buttons {
+    margin-top: 25%;
+    margin-left: 5%;
+    text-transform: uppercase;
+    text-decoration: underline;
+    color: var(--font);
+}
+.result {
+    //styleName: Caption/bold 12 uppercase;
+    font-family: Inter;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 14.52px;
+
+}
+.result:hover {
+    cursor: pointer;
+}
+.clear {
+    margin-left: 40%;
+    //styleName: Caption/bold 12 uppercase;
+    font-family: Inter;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 14.52px;
+
+}
+.clear:hover {
+    cursor: pointer;
+}
+.authors{
+    margin-left: 20%;
+    width: var(--filter-input-width-sec);
+    height: 33px;
+    border: var(--border);
+    background-color: var(--secondary);
+    color: var(--font);
+    //styleName: Paragraph small/light 12;
+    font-family: Inter;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 16.8px;
+    color: #575757;
+    border-radius: 4px;
+}
+.authors:hover {
+    cursor: pointer;
+}
+
+.invisible {
+    position: absolute;
+    display: none;
+}
+
+.listAuthors {
+    margin-left: 20%;
+    width: var(--filter-input-width);
+    height: 200px;
+    overflow: hidden scroll;
+    scrollbar-width: thin;
+    border: 0;
+    background-color: var(--secondary);
+    color: var(--font);
+    //styleName: Paragraph small/light 12;
+    font-family: Inter;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 16.8px;
+    color: #575757;
+    border-radius: 4px;
+    input {
+        border: var(--border);
+        width: var(--filter-input-width-sec);
+        height: 33px;
+    }
+    input:focus {
+        outline: 0;
+    }
+    input:hover {
+        cursor: pointer;
+    }
+}
+
+.years {
+    margin-left: 20%;
+    svg {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    input {
+        width: 67px;
+        height: 33px;
+        border-radius: 4px;
+        border: var(--border);
+        background: var(--secondary);
+        color: var(--font);
+    }
+}
+
+.years input:focus {
+    outline: 0;
+}
+
+.lineBetween {
+    margin-left: 15%;
+}
+.chosenAuthor {
+    border: var(--border);
+    width: 236px;
+    height: 33px;
+}
+.chosenAuthor:focus {
+    outline: 0;
+}
+.chosenAuthor:hover {
+    cursor: pointer;
+}
+.yearFromTo {
+    background: var(--secondary);
+}
+
+.plus {
+    position: absolute;
+    width: var(--menu-width);
+    transform: translateY(-34px) translateX(85%);
+    svg{
+        width: var(--plusminus_width);
+        height: var(--plusminus_height);
+    }
+}
+.plus:hover {
+    cursor: pointer;
+}
+.pointer {
+    position: absolute;
+    transform: var(--move-pointer);
+}

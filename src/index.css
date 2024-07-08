@@ -1,0 +1,60 @@
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+.dark {
+  color-scheme: dark;
+  overflow: hidden;
+  --primary: #121212;
+  --primary_second: #575757;
+
+  --secondary:  #1A1818;
+  --secondary_second: #9C9C9C;
+
+  --accent: #AB8956;
+
+  --font: #DEDEDE;
+  --font_second: #AB8956;
+  
+  --color: dark;
+
+  --logo: #DEDEDE;
+
+  --border: none;
+
+  --background_current_page: #1A1818;
+
+}
+.light{
+  color-scheme: light;
+  overflow: hidden;
+  --primary: #FFFFFF;
+  --primary_second: #DEDEDE;
+
+  --secondary:  #FCFCFC;
+  --secondary_second: #9C9C9C;
+
+  --accent: #9B4B4B;
+
+  --font: #121212;
+  --font_second: #9B4B4B;
+
+  --color: light;
+
+  --logo: #575757;
+
+  --border: 1px solid var(--secondary_second);
+
+  --background_current_page: #1212120D;
+}
+
+body {
+  background-color: var(--primary);
+  width: 100%;
+}
+#root {
+  height: 100%;
+}

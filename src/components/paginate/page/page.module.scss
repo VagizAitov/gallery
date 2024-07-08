@@ -1,0 +1,111 @@
+@import url('../../../variable.module.scss');
+
+.container{
+    overflow: hidden;
+    width: var(--width-painting);
+    height: var(--height-painting);
+    .painting {
+        width: var(--width-painting);
+        height: var(--height-painting);
+        transition: 0.4s;
+    }
+    .infoHolder {
+        overflow: hidden;
+        position: absolute;
+        width: var(--width-rect);
+        height: var(--height-rect);
+        background: var(--primary);
+        transform: translateY(var(--move-rect)) translateX(-1px);
+    }
+    .secondRect {
+        width: var(--width-rect-second);
+        height: var(--height-rect-second);
+        background: var(--accent);
+        transform: translateX(var(--move-rect-second-x)) translateY(var(--move-rect-second-y));
+        border: 0;
+        svg path{
+            fill: #DEDEDE;
+        }
+    }
+
+    .nameYear{
+        width: var(--width-rect);
+        height: var(--height-rect);
+        position: absolute;
+        transition: 0.2s;
+        p {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            padding-left: 20px;
+            margin-top: var(--font-margin);
+        }
+    }
+    .authorLocation {
+        width: var(--width-rect);
+        height: var(--height-rect);
+        position: absolute;
+        right: 100%;
+        transition: 0.2s;
+        p {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            padding-left: 30px;
+            margin-top: var(--font-margin);
+        }
+    }
+}
+.container:hover {
+    .painting{
+        transform: scale(1.1);
+    }
+    .nameYear{
+        transform: translateY(100%);
+    }
+    .authorLocation{
+        transform: translateX(100%);
+    }
+}
+.decorationLine {
+    position: absolute;
+    height: 42px;
+    width: 2px;
+    background: var(--decoration-line);
+    transform: translateY(var(--decoration-line-transform));
+}
+
+.paintingName {
+    font-family: Cormorant SC;
+    font-size: var(--font-size-up);
+    font-weight: 500;
+    line-height: 19.38px;
+    text-align: left;
+}
+
+.paintingCreated {
+    font-family: Inter;
+    font-size: var(--font-size-down);
+    font-weight: 700;
+    line-height: 14.52px;
+    text-align: left;
+    color: var(--accent);
+}
+
+.author {
+    font-family: Cormorant SC;
+    font-size: var(--font-size-up);
+    font-weight: 500;
+    line-height: 19.38px;
+    text-align: left;
+    
+}
+
+.location {
+    font-family: Inter;
+    font-size: var(--font-size-down);
+    font-weight: 700;
+    line-height: 14.52px;
+    text-align: left;
+    color: var(--accent);
+}
